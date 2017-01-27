@@ -1,0 +1,23 @@
+.rkekule-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.rkekule-tooltiptext {
+	visibility: hidden;
+    background-color: #f5f5f5;
+    border: 1px solid #b3b3b3;
+    color: black;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.rkekule-tooltip:hover .rkekule-tooltiptext {
+    visibility: visible;
+}

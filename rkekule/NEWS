@@ -1,0 +1,25 @@
+# v0.0.1
+
+## Features
+
+* htmlwidgets scaffolding
+* shiny integration 
+
+# v0.0.2
+
+## Features
+
+* Datatable (DT) integration
+
+# v0.0.3
+
+## Features
+
+* Option to use a hover tooltip to display structure in datatable
+
+# v0.0.4
+
+## Features
+
+* adds function to explictly include the depedencies
+* adds convenience function to import molfiles

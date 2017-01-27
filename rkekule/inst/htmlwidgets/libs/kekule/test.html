@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../libs/raphael-min.2.0.1.js"></script>
+    <script src="../../libs/Three.js"></script>
+    <script src="../../libs/kekule/kekule.js?modules=io,chemWidget"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../lib/themes/default/kekule.css" />
+</head>
+<body>
+    <script>
+    var chemViewer;
+    function init() {
+        var cmlData = '<cml xmlns="http://www.xml-cml.org/schema"><molecule id="m1"><atomArray><atom id="a2" elementType="C" x2="7.493264658965051" y2="35.58088907877604"/><atom id="a3" elementType="O" x2="8.186084981992602" y2="35.18088907877604"/><atom id="a1" elementType="C" x2="6.800444335937501" y2="35.18088907877604"/></atomArray><bondArray><bond id="b2" order="S" atomRefs2="a2 a3"/><bond id="b1" order="S" atomRefs2="a2 a1"/></bondArray></molecule></cml>';
+        var molecule = Kekule.IO.loadFormatData(cmlData, 'cml');
+        chemViewer = new Kekule.ChemWidget.Viewer(document);
+        chemViewer.setDimension('500px', '400px');
+        chemViewer.appendToElem(document.getElementById('pickme')).setChemObj(molecule);
+    }
+
+    Kekule.X.domReady(init);
+
+    </script>
+    <div id = "pickme"></div>
+</body>
+</html>

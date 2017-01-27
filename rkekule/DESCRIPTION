@@ -1,0 +1,18 @@
+Package: rkekule
+Title: Wrapper of the JavaScript library 'Kekule.js'
+Description: Render interative visualizations of chemical structures using the
+  'Kekule.js' JavaScript library and the 'htmlwidgets' package.
+Version: 0.1.0
+Author: Daan Seynaeve
+Maintainer: Daan Seynaeve <daan.seynaeve@openanalytics.eu>
+License: GPL-3 + file LICENSE
+Depends:
+    R (>= 3.2)
+Imports:
+	htmlwidgets,
+	htmltools
+Suggests:
+	shiny,
+	testthat,
+	DT
+RoxygenNote: 6.0.1

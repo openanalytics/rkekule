@@ -1,0 +1,27 @@
+dependencies:
+  - name: jquery
+    version: 1.11.3
+    src: "htmlwidgets/libs/"
+    script: jquery.min.js
+  - name: raphaeljs
+    version: 2.0.1
+    src: htmlwidgets/libs/
+    script:
+      - raphael-min.2.0.1.js
+  - name: threejs
+    version: 0.84.0
+    src: htmlwidgets/libs/
+    script:
+      - Three.js
+  - name: kekulejs
+    version: 0.0.13
+    src: htmlwidgets/libs/kekule
+    script:
+      - kekule.min.js
+    stylesheet:
+      - themes/default/kekule.css
+  - name: rkekule-style
+    version: 0.0.0
+    src: htmlwidgets/
+    stylesheet:
+      - rkekule-tooltip.css
