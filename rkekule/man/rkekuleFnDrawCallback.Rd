@@ -14,5 +14,5 @@ HTML script tag
 }
 \description{
 Returns an expression to use in the \code{options$fnDrawCallback}
-argument of \link{DT::datatable}.
+argument of \code{\link[DT]{datatable}}.
 }

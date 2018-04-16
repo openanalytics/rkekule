@@ -2,10 +2,29 @@
 % Please edit documentation in R/shiny.R
 \name{rkekuleOutput}
 \alias{rkekuleOutput}
-\title{Widget Output Function For Use In Shiny}
+\alias{renderRkekule}
+\title{Helper functions for using chemViewer in Shiny}
 \usage{
 rkekuleOutput(outputId, width = "100\%", height = "400px")
+
+renderRkekule(expr, env = parent.frame(), quoted = FALSE)
+}
+\arguments{
+\item{outputId}{output variable to read the widget from}
+
+\item{expr}{output of \code{\link{chemViewer}}}
+
+\item{env}{The environment in which to evaluate expr.}
+
+\item{quoted}{Is expr a quoted expression (with \code{quote()})?
+This is useful if you want to save an expression in a variable.}
+
+\item{the}{width of the widget container}
+
+\item{the}{height of the table container}
 }
 \description{
-Widget Output Function For Use In Shiny
+\code{rkekuleOutput}: create a container for the widget
+
+\code{renderRkekule}: server logic to render the widget
 }

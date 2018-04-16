@@ -4,7 +4,8 @@
 ###############################################################################
 
 #' Provides a html wrapper for a table column with chemical structure data.
-#' @description Return an expression to use in the \code{options$coldefs} argument of \link{DT::datatable}.
+#' @description Return an expression to use in the \code{options$coldefs}
+#' argument of \link[DT]{datatable}.
 #' @param targets vector of zero-based indices of columns that need to be rendered
 #' @param useTooltip only show the structure upon hovering
 #' @export
@@ -28,7 +29,7 @@ rkekuleColumnDefs <- function(targets, useTooltip = TRUE) {
 
 #' Provides a javascript call to draw the html-wrapper structures
 #' @description Returns an expression to use in the \code{options$fnDrawCallback}
-#' argument of \link{DT::datatable}.
+#' argument of \code{\link[DT]{datatable}}.
 #' @param settings kekule rendering settings
 #' @return HTML script tag
 #' @export
@@ -42,9 +43,9 @@ rkekuleFnDrawCallback <- function(settings = "type: 'mol', width: 100, height: 1
 #' @description Attaches the rkekule dependencies to a HTML tag or widget.
 #' @param x object (tag) to attach the dependencies to. Default to an empty div
 #' @return HTML empty div tag with rkekule dependencies attached
-#' @import htmlwidgets
+#' @importFrom htmlwidgets getDependency
 #' @importFrom htmltools attachDependencies
 #' @export
 attachRkekuleDependencies <- function(x = div()) {
-	attachDependencies(x, htmlwidgets::getDependency("rkekule", "rkekule"))
+	attachDependencies(x, getDependency("rkekule", "rkekule"))
 }

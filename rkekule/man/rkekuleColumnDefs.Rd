@@ -12,5 +12,6 @@ rkekuleColumnDefs(targets, useTooltip = TRUE)
 \item{useTooltip}{only show the structure upon hovering}
 }
 \description{
-Return an expression to use in the \code{options$coldefs} argument of \link{DT::datatable}.
+Return an expression to use in the \code{options$coldefs}
+argument of \link[DT]{datatable}.
 }
