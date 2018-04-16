@@ -23,7 +23,7 @@ rkekuleColumnDefs <- function(targets, useTooltip = TRUE) {
   
   list(
       targets = targets,
-      render = JS(paste0("function(data, type, full){ return '", prefix, "' + data + '", suffix, "' }"))
+      render = DT::JS(paste0("function(data, type, full){ return '", prefix, "' + data + '", suffix, "' }"))
   )
 }
 
@@ -36,7 +36,7 @@ rkekuleColumnDefs <- function(targets, useTooltip = TRUE) {
 rkekuleFnDrawCallback <- function(settings = "type: 'mol', width: 100, height: 100") {
   js <- paste0("function (oSettings, json) { $('.rkekule-wrapper').rkekule({ ",
 			settings, " }); }", collapse = "")
-	JS(js)
+	DT::JS(js)
 }
 
 #' Explicitly Include The HTML Dependencies
@@ -44,7 +44,7 @@ rkekuleFnDrawCallback <- function(settings = "type: 'mol', width: 100, height: 1
 #' @param x object (tag) to attach the dependencies to. Default to an empty div
 #' @return HTML empty div tag with rkekule dependencies attached
 #' @importFrom htmlwidgets getDependency
-#' @importFrom htmltools attachDependencies
+#' @importFrom htmltools attachDependencies div
 #' @export
 attachRkekuleDependencies <- function(x = div()) {
 	attachDependencies(x, getDependency("rkekule", "rkekule"))

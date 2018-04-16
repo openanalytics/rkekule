@@ -12,16 +12,16 @@ renderRkekule(expr, env = parent.frame(), quoted = FALSE)
 \arguments{
 \item{outputId}{output variable to read the widget from}
 
+\item{width}{the width of the widget container}
+
+\item{height}{the height of the widget container}
+
 \item{expr}{output of \code{\link{chemViewer}}}
 
 \item{env}{The environment in which to evaluate expr.}
 
 \item{quoted}{Is expr a quoted expression (with \code{quote()})?
 This is useful if you want to save an expression in a variable.}
-
-\item{the}{width of the widget container}
-
-\item{the}{height of the table container}
 }
 \description{
 \code{rkekuleOutput}: create a container for the widget

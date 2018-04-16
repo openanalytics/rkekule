@@ -10,6 +10,8 @@
 #' is constructed. E.g. when inside renderUI in shiny.
 #' @param dataChemObj the data
 #' @param id avoid clashes between multiple bindings
+#' @param width widget width
+#' @param height widget height
 #' @return \code{character()} vector of length 1
 #' @references
 #' https://partridgejiang.github.io/Kekule.js/documents/tutorial/content/chemViewer.html#creating-viewer

@@ -10,6 +10,10 @@ rkekuleHtmlBinding(dataChemObj, id, width = 500, height = 400)
 \item{dataChemObj}{the data}
 
 \item{id}{avoid clashes between multiple bindings}
+
+\item{width}{widget width}
+
+\item{height}{widget height}
 }
 \value{
 \code{character()} vector of length 1
