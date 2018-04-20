@@ -1,6 +1,6 @@
 # rkekule
 
-`rkekule` is a wrapper of the JavaScript library [Kekule.js](http://partridgejiang.github.io/Kekule.js/)
+`rkekule` is an R wrapper of the JavaScript library [Kekule.js](http://partridgejiang.github.io/Kekule.js/)
 
 ## Installation
 
