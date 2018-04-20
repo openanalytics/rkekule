@@ -22,9 +22,9 @@
 	        		
 	        	}
 	        	
-	        	console.log('inner data found:');
-		    	console.log(data);
-		    	console.log(settings);
+	        	// console.log('inner data found:');
+		    	// console.log(data);
+		    	// console.log(settings);
 	        	
 	        	$(this).html('');
 		    
