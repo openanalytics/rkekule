@@ -5,7 +5,7 @@ Description: Render interative visualizations of chemical structures using the
 Version: 0.1.0
 Author: Daan Seynaeve
 Maintainer: Daan Seynaeve <daan.seynaeve@openanalytics.eu>
-License: GPL-3 + file LICENSE
+License: MIT + file LICENSE
 Depends:
     R (>= 3.2)
 Imports:
@@ -14,5 +14,6 @@ Imports:
 Suggests:
 	shiny,
 	testthat,
-	DT
+	DT,
+	ChemmineOB
 RoxygenNote: 6.0.1
