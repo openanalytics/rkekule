@@ -14,7 +14,7 @@ dependencies:
     script:
       - Three.js
   - name: kekulejs
-    version: 0.0.13
+    version: 0.8.1.18102900
     src: htmlwidgets/libs/kekule
     script:
       - kekule.min.js

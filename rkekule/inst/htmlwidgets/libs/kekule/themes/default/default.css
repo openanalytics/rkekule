@@ -16,8 +16,10 @@
 .K-Widget,input.K-Widget,button.K-Widget{display:inline-block}
 table.K-Widget{display:table}
 .K-Widget .K-Widget{font-size:1em}
+.K-Widget .K-Section{padding-top:.2em;padding-bottom:.2em}
 .K-Container .K-Widget{}
 .K-Panel{padding:.7em}
+.K-Panel .K-Panel-Caption{display:block;margin:-0.3em;margin-bottom:.7em;padding:.3em;padding-top:0;border-bottom:1px solid;font-size:1.1em;font-family:Verdana,Arial;font-weight:bold}
 .K-Panel,.K-Toolbar{border:1px solid}
 .K-Toolbar.K-Button-Group{border:none}
 .K-Button-Group .K-Widget{margin:0}
@@ -28,13 +30,19 @@ table.K-Widget{display:table}
 .K-Button-Group .K-Button.K-State-Focused,.K-Button-Group .K-Button.K-State-Hover,.K-Button-Group .K-Button.K-State-Active{z-index:2}
 .K-Glyph{vertical-align:middle}
 .K-Menu{cursor:default}
-.K-Menu,.K-Menu ul,.K-Menu ol{border:1px solid;margin:0;padding:0}
-.K-Menu li{display:block;position:relative;list-style:none;margin:0;padding:.1em 2em;line-height:1.5}
-.K-Menu.K-Layout-H>li{float:left}
-.K-Menu li:hover{background-color:#dadada}
-.K-Menu li>ul,.K-Menu li>ol{display:none;position:absolute;left:100%;top:0}
-.K-Menu li:hover>ul,.K-Menu li:hover>ol{display:block}
-.K-Menu.K-Layout-H>li>ul,.K-Menu.K-Layout-H>li>ol{left:0;top:100%}
+.K-Menu{border:1px solid;margin:0;padding:0}
+.K-Menu .K-MenuItem{display:block;position:relative;list-style:none;margin:0;padding:.2em 2em;line-height:1.5;white-space:nowrap}
+.K-Menu .K-MenuItem .K-SubMenu-Marker,.K-Menu .K-MenuItem .K-CheckMenu-Marker{display:inline-block;position:absolute}
+.K-Menu .K-MenuItem .K-SubMenu-Marker{left:auto;right:.3em}
+.K-Menu .K-MenuItem .K-CheckMenu-Marker{left:.3em}
+.K-Menu.K-Layout-H>.K-MenuItem{float:left}
+.K-Menu .K-MenuItem-Separator{}
+.K-Menu.K-Layout-H>.K-MenuItem-Separator{margin:0 .2em;padding-left:0;padding-right:0;width:0;border-left:1px solid}
+.K-Menu.K-Layout-V>.K-MenuItem-Separator{padding-top:0;padding-bottom:0;margin:.2em 0;height:0;border-top:1px solid}
+.K-Menu .K-MenuItem>.K-Menu,.K-Menu .K-MenuItem>.K-Menu{display:none;position:absolute;left:100%;top:0}
+.K-Menu .K-MenuItem:hover>.K-Menu,.K-Menu .K-MenuItem:active>.K-Menu,.K-Menu .K-MenuItem:focus>.K-Menu{display:block}
+.K-Menu .K-MenuItem.K-State-Disabled:hover>.K-Menu,.K-Menu .K-MenuItem.K-State-Disabled:active>.K-Menu,.K-Menu .K-MenuItem.K-State-Disabled:focus>.K-Menu{display:none}
+.K-Menu.K-Layout-H>.K-MenuItem>.K-Menu{left:0;top:100%}
 .K-MsgPanel{display:block;text-align:center}
 .K-MsgPanel .K-MsgPanel-Content{display:inline-block;padding:.3em .7em;border:1px solid}
 .K-MsgPanel .K-Pri-Glyph-Content{width:16px;height:16px;display:none}
@@ -72,7 +80,7 @@ table.K-Widget{display:table}
 .K-TabButtonGroup.K-TabAtLeft>.K-Button{border-left:3px solid transparent;text-align:right}
 .K-Resize-Gripper{position:absolute;right:0;bottom:0;width:16px;height:16px;cursor:se-resize;z-index:1000}
 .K-Resize-Gripper.K-State-Disabled{cursor:default}
-.K-Resize-Gripper.K-Normal-Background{background-color:transparent}
+.K-Widget.K-Transparent-Background,.K-Resize-Gripper.K-Normal-Background{background-color:transparent}
 .K-TabView{position:relative}
 .K-TabView-TabAtTop .K-TabView-TabButton-Container,.K-TabView-TabAtBottom .K-TabView-TabButton-Container,.K-TabView-TabAtTop .K-TabView-Page-Container,.K-TabView-TabAtBottom .K-TabView-Page-Container{display:block}
 .K-TabView-TabAtLeft .K-TabView-TabButton-Container,.K-TabView-TabAtRight .K-TabView-TabButton-Container,.K-TabView-TabAtLeft .K-TabView-Page-Container,.K-TabView-TabAtRight .K-TabView-Page-Container{display:inline-block;vertical-align:top}
@@ -99,11 +107,12 @@ table.K-Widget{display:table}
 .K-Widget-Grid .K-Widget-Grid-Cell .K-Widget-Grid-Widget-Parent>.K-Widget{display:inline-block;vertical-align:middle}
 .K-Dialog{border:1px solid;overflow:hidden;position:absolute;position:fixed}
 .K-Dialog.K-Dialog-Overflow{position:absolute}
+.K-Dialog.K-Dialog-Inside{position:absolute;position:fixed}
 .K-Dialog .K-Dialog-Caption{display:block;padding:.4em 1em;border-bottom:1px solid;font-size:1.1em;font-family:Verdana,Arial;font-weight:bold}
 .K-Dialog .K-Dialog-Client{padding:.5em}
 .K-Dialog .K-Dialog-Button-Panel{padding:0 .25em;text-align:right;overflow:hidden}
 .K-Dialog .K-Dialog-Button-Panel .K-Widget{margin:.5em .25em}
-.K-Dialog-Modal-Background{z-index:20000;position:absolute;position:fixed;top:0;left:0;right:0;bottom:0}
+.K-Modal-Background{z-index:20000;position:absolute;position:fixed;top:0;left:0;right:0;bottom:0}
 .K-TextEditor{}
 .K-TextEditor .K-TextEditor-Toolbar,.K-TextEditor .K-TextEditor-TextArea{display:block;margin:0;width:100%}
 .K-TextEditor .K-TextEditor-Toolbar{z-index:100;white-space:nowrap}
@@ -121,12 +130,12 @@ table.K-Widget{display:table}
 .K-ColorPicker .K-ColorPicker-Spec-Color-Palette{padding:0;margin:0;margin-right:.3em}
 .K-ColorPicker .K-ColorPicker-Spec-Color-Palette .K-ColorPicker-Palette-Cell{float:left;height:1.4em;width:1.4em}
 .K-ColorPicker .K-ColorPicker-Palette,.K-ColorPicker .K-ColorPicker-Spec-Color-Palette{float:left;border-right:1px solid;border-bottom:1px solid;cursor:pointer}
-.K-ColorPicker .K-ColorPicker-Palette{min-width:180px}
+.K-ColorPicker .K-ColorPicker-Palette{min-width:180px;touch-action:none}
 .K-ColorPicker .K-ColorPicker-Palette-Line{font-size:0}
 .K-ColorPicker .K-ColorPicker-Palette-Line,.K-ColorPicker .K-ColorPicker-Palette-Cell{margin:0;padding:0;line-height:1}
 .K-ColorPicker .K-ColorPicker-Palette-Cell{display:inline-block;width:9px;height:9px;border-top:1px solid;border-left:1px solid}
 .K-ColorDropTextBox .K-ColorPreviewer{border:1px solid;box-sizing:border-box;width:1.5em;height:80%;padding:0 .1em}
-.K-ColorDropButton .K-Pri-Glyph-Content{border:1px solid}
+.K-ColorDropButton .K-Pri-Glyph-Content{outline:1px solid}
 .K-ValueListEditor{display:table;border:1px solid;border-collapse:collapse;padding:0;line-height:normal;cursor:default;vertical-align:top;empty-cells:show;table-layout:fixed;width:25em}
 .K-ValueListEditor .K-ValueListEditor-Row{border-collapse:collapse;border-top:1px dotted;border-bottom:1px dotted}
 .K-ValueListEditor .K-ValueListEditor-Cell{border-collapse:collapse;padding:.2em .4em;margin:0;vertical-align:middle;white-space:nowrap;overflow:hidden}
@@ -152,7 +161,7 @@ table.K-Widget{display:table}
 .K-ObjInspector .K-ObjInspector-PropInfoPanel .K-ObjInspector-PropInfoPanel-Description{line-height:1.2em;margin-left:.5em;white-space:normal}
 .K-DataTable table{display:block;border-collapse:collapse}
 .K-DataTable td,.K-DataTable th{border:1px solid;padding:0}
-.K-DataTable th .K-DataTable-HeadCellInteractable{cursor:pointer}
+.K-DataTable th.K-DataTable-HeadCellInteractable{cursor:pointer}
 .K-DataTable th .K-DataTable-SortMark{display:inline-block;vertical-align:middle;padding:0}
 .K-DataTable .K-DataTable-CellWrapper{display:inline-block;margin:.4em}
 .K-PageNavigator.K-Layout-H{height:2.5em}
@@ -169,12 +178,12 @@ input.K-Button::-moz-focus-inner,button.K-Button::-moz-focus-inner{border:0;padd
 .K-State-Hover{}
 .K-State-Active{}
 .K-State-Selected{}
-.K-Show-Popup{position:absolute;z-index:21000}
-.K-Show-Dialog{z-index:20500}
+.K-Show-Popup{position:absolute}
+.K-Show-Dialog,.K-Show-Popup,.K-Show-ActiveModal{z-index:20000}
 .K-Corner-All,.K-Corner-Top,.K-Corner-Left,.K-Layout-H > .K-Corner-Leading,.K-Layout-V > .K-Corner-Leading,.K-Corner-TL{border-top-left-radius:4px}
 .K-Corner-All,.K-Corner-Top,.K-Corner-Right,.K-Layout-H > .K-Corner-Tailing,.K-Layout-V > .K-Corner-Leading,.K-Corner-TR{border-top-right-radius:4px}
 .K-Corner-All,.K-Corner-Bottom,.K-Corner-Left,.K-Layout-H > .K-Corner-Leading,.K-Layout-V > .K-Corner-Tailing,.K-Corner-BL{border-bottom-left-radius:4px}
 .K-Corner-All,.K-Corner-Bottom,.K-Corner-Right,.K-Layout-H > .K-Corner-Tailing,.K-Layout-V > .K-Corner-Tailing,.K-Corner-Br{border-bottom-right-radius:4px}
 .K-Fulfill{width:100%;height:100%;padding:0;margin:0;border:0;display:block}
 .K-No-Wrap{white-space:nowrap}
-#CssGaga{content:"150715175641,swt,333"}
+#CssGaga{content:"180917162804,swt,334"}
