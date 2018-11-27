@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     options {
         buildDiscarder(logRotator(numToKeepStr: '3'))
     }
@@ -11,6 +11,7 @@ pipeline {
             agent {
                 docker {
                     image 'registry.openanalytics.eu/private/packamon'
+                    reuseNode true
                 }
             }
             steps {
