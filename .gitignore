@@ -1,3 +1,6 @@
 .project
 *.tar.gz
 *.Rcheck
+
+/examples/*.html
+/examples/*_files/

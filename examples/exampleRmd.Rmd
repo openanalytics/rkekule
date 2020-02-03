@@ -1,5 +1,8 @@
 ---
 title: rkekule in Rmarkdown
+output:
+  html_document:
+    self_contained: false
 ---
 
 ```{r}
