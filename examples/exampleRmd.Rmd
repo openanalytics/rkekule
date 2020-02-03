@@ -1,0 +1,8 @@
+---
+title: rkekule in Rmarkdown
+---
+
+```{r}
+mol <- rkekule::readMolfile(system.file("extdata", "example1.mol", package = "rkekule"))
+rkekule::chemViewer(mol, chemicalFormat = "mol", renderType = "2D")
+```

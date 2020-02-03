@@ -26,7 +26,7 @@ server <- function(input, output, session) {
   
   output$viewer <- renderRkekule({
         
-        chemViewer(mol, inputType = "mol", renderType = "2D")
+        chemViewer(mol, chemicalFormat = "mol", renderType = "2D")
         
       })
   
